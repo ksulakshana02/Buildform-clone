@@ -1,0 +1,64 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.logo {
+    margin: 20px;
+    width: 120px;
+}
+
+.full-scroll-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    overflow: hidden;
+
+}
+
+.full-scroll-content::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+.full-scroll-content {
+
+    width: 100%;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+    overflow-y: auto;
+    /* Enable vertical scrolling for content */
+}
+
+/* Full scroll page */
+.full-scroll-page {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Content within full scroll page */
+.full-scroll-page-content {
+    flex-grow: 1;
+    /* Fill available space */
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media only screen and (max-width: 576px) {
+    .full-scroll-page-content {
+        margin-top: 40px;
+    }
+}
